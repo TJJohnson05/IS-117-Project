@@ -1,0 +1,236 @@
+
+:root {
+    --ink: #f5f4f0;
+    --bg: #10131a;
+    --panel: #1d2330;
+    --accent: #ffb547;
+    --muted: #b9c2d2;
+}
+
+/* Universal Selector */
+* {
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    line-height: 1.65;
+}
+
+/* Links */
+a {
+    color: #ffd18b;
+}
+
+a:hover {
+    color: #fff;
+}
+
+/* Navigation Bar */
+.site-nav {
+    background: #0a0d13;
+    box-shadow: 0 2px 20px #0005;
+}
+
+.navbar-brand {
+    letter-spacing: .02em;
+}
+
+.navbar-brand span {
+    color: var(--accent);
+}
+
+.navbar .nav-link {
+    color: #f4f4f4;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+    color: var(--accent);
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    background: #1b202a;
+}
+
+/* Homepage Hero Section */
+.hero {
+    background: radial-gradient(
+        circle at 85% 15%,
+        #3b3152 0%,
+        transparent 45%
+    ),
+    linear-gradient(135deg, #1d2537, #11141c);
+
+    padding: 4rem 0;
+}
+
+.hero h1 {
+    max-width: 13ch;
+    line-height: 1.1;
+}
+
+.hero-art {
+    width: 100%;
+    max-height: 380px;
+}
+
+.eyebrow {
+    font-size: .8rem;
+    font-weight: 700;
+    letter-spacing: .15em;
+    color: var(--accent);
+}
+
+/* Section Headings */
+.section-heading {
+    margin-bottom: 1.4rem;
+}
+
+.section-heading p {
+    color: var(--muted);
+}
+
+/* Catalog Cards and Content Panels */
+.catalog-card,
+.content-panel {
+    background: var(--panel);
+    border: 1px solid #374052;
+    color: var(--ink);
+    border-radius: 1rem;
+}
+
+.catalog-card {
+    overflow: hidden;
+    transition: transform .2s, border-color .2s;
+}
+
+.catalog-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent);
+}
+
+.catalog-card img {
+    height: 175px;
+    object-fit: cover;
+    background: #303747;
+}
+
+.catalog-card .card-body {
+    padding: 1.5rem;
+}
+
+.text-secondary-emphasis {
+    color: var(--muted) !important;
+}
+
+/* Interior Page Banner */
+.page-banner {
+    background: linear-gradient(120deg, #242d42, #161b28);
+    padding: 3.5rem 0;
+    border-bottom: 1px solid #3a4456;
+}
+
+.page-banner .lead {
+    color: #d4d9e4;
+    max-width: 55rem;
+}
+
+/* Content Panels */
+.content-panel {
+    padding: 2rem;
+}
+
+.content-panel p:last-child {
+    margin-bottom: 0;
+}
+
+/* Call to Action Panel */
+.cta-panel {
+    background: #633d29;
+    border-radius: 1rem;
+    padding: 2.5rem;
+}
+
+/* Footer */
+.site-footer {
+    background: #090b10;
+    border-top: 1px solid #343b49;
+    color: #c6cbd6;
+    font-size: .95rem;
+}
+
+.site-footer a {
+    color: #e3e5ec;
+    text-decoration: none;
+}
+
+.site-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Forms */
+.form-control,
+.form-select {
+    background: #fff;
+    color: #151515;
+    border: 1px solid #9aa4b5;
+}
+
+.form-control:focus,
+.form-select:focus {
+    background: #fff;
+    color: #151515;
+    border-color: #ffb547;
+    box-shadow: 0 0 0 .2rem #ffb54744;
+}
+
+/* Buttons */
+.btn-warning {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #151515;
+    font-weight: 700;
+}
+
+.btn-outline-warning {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.btn-outline-warning:hover {
+    color: #151515;
+}
+
+/* Skip Navigation Link */
+.skip-link {
+    position: absolute;
+    z-index: 2000;
+    background: white;
+    color: black;
+    padding: 1rem;
+}
+
+/* Responsive Design for Mobile Devices */
+@media (max-width: 767px) {
+
+    .hero {
+        padding: 1.5rem 0;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .page-banner {
+        padding: 2.5rem 0;
+    }
+
+    .content-panel {
+        padding: 1.25rem;
+    }
+}
